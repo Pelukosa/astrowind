@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
 
 const metadata = {
   title: 'Contact',
@@ -14,30 +15,19 @@ const metadata = {
 
   <HeroText tagline="Contact" title="Let's Connect!" />
 
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
+  <Steps2
+    items={[
       {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
+        title: 'Email Support',
+        description: 'support@habisos.com',
+        icon: 'tabler:mail',
       },
       {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
+        title: 'Follow Us',
+        description: 'https://www.linkedin.com/company/habisos',
+        icon: 'tabler:brand-linkedin',
       },
     ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
   />
 
   <!-- Features2 Widget ************** -->
